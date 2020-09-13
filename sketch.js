@@ -64,6 +64,7 @@ function draw() {
    monkey.velocityY = monkey.velocityY + 0.8
   monkey.collide(ground);
   monkey.x=200;
+   monkey.y=380;
     gameover.visible=false;
     reset.visible=false;
      obstaclegroup.visible=true;
