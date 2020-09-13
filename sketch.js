@@ -73,7 +73,8 @@ function draw() {
   }
   else if(gameState===END){
      obstaclegroup.visible=false;
-    monkey.x=10000;
+    monkey.x=700;
+   
     gameover.visible=true;
     banana.visible=false;
   survivalTime=0;
