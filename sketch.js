@@ -60,8 +60,10 @@ function draw() {
   noFill();
    spwanobstacle();
   food();
-   
-   monkey.velocityY = monkey.velocityY + 0.8
+   if(mousePressedOver(jump)&& monkey.y >= 335) {
+      monkey.velocityY  =-13;
+    }
+  // monkey.velocityY = monkey.velocityY + 0.8
   monkey.visible=true;
   //monkey.x=200;
    //monkey.y=380;
@@ -84,9 +86,7 @@ function draw() {
   }
   
 drawSprites();
-  if(mousePressedOver(jump)&& monkey.y >= 335) {
-      monkey.velocityY  =-13;
-    }
+  
   if (keyDown("space")&& monkey.y >=335){
    monkey.velocityY  =-13;
       }
