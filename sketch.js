@@ -62,9 +62,9 @@ function draw() {
   food();
    
    monkey.velocityY = monkey.velocityY + 0.8
-  monkey.collide(ground);
-  monkey.x=200;
-   monkey.y=380;
+  monkey.visible=true;
+  //monkey.x=200;
+   //monkey.y=380;
     gameover.visible=false;
     reset.visible=false;
      obstaclegroup.visible=true;
@@ -73,7 +73,7 @@ function draw() {
   }
   else if(gameState===END){
      obstaclegroup.visible=false;
-    monkey.x=700;
+    monkey.visible=false;
    
     gameover.visible=true;
     banana.visible=false;
@@ -98,7 +98,7 @@ drawSprites();
   if(mousePressedOver(reset)){
      gameState=1;
      }
-  
+  monkey.collide(ground);
 }
   
 function spwanobstacle(){
