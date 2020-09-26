@@ -49,7 +49,7 @@ function setup() {
 
 function draw() {
   background("white");
- 
+  // monkey.collide(ground);
   if (gameState===PLAY){
       monkey.visible=true;
      stroke("black");
@@ -98,7 +98,7 @@ drawSprites();
   if(mousePressedOver(reset)){
      gameState= PLAY;
      }
-  monkey.collide(ground);
+
 }
   
 function spwanobstacle(){
