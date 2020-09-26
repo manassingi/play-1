@@ -26,7 +26,7 @@ function preload(){
 function setup() {
   createCanvas(600,400)
  
-  monkey=createSprite(200,320,20,50);
+  monkey=createSprite(200,340,20,50);
   monkey.addAnimation("running", monkey_running);
   monkey.scale=0.1;
 
@@ -90,8 +90,8 @@ drawSprites();
   if (keyDown("space")&& monkey.y >=335){
    monkey.velocityY  =-13;
       }
-  
- if (monkey.collide( obstaclegroup)){
+  monkey.depth=obstaclegroup.depth;
+ if (monkey.isTouching( obstaclegroup)){
    gameState=0;
  }
  
