@@ -26,7 +26,7 @@ function preload(){
 function setup() {
   createCanvas(600,400)
  
-  monkey=createSprite(200,340,20,50);
+  monkey=createSprite(200,360,20,50);
   monkey.addAnimation("running", monkey_running);
   monkey.scale=0.1;
 
@@ -60,7 +60,7 @@ function draw() {
   noFill();
    spwanobstacle();
   food();
-   if(mousePressedOver(jump)&& monkey.y > 335) {
+   if(mousePressedOver(jump)&& monkey.y >335) {
       monkey.velocityY  =-13;
     }
   // monkey.velocityY = monkey.velocityY + 0.8
@@ -92,7 +92,7 @@ drawSprites();
       }
   monkey.depth=obstaclegroup.depth;
  if (monkey.isTouching( obstaclegroup)){
-   gameState=0;
+   gameState=END;
  }
  
   if(mousePressedOver(reset)){
