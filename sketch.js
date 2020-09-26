@@ -60,7 +60,7 @@ function draw() {
   noFill();
    spwanobstacle();
   food();
-   if(mousePressedOver(jump)&& monkey.y >= 335) {
+   if(mousePressedOver(jump)&& monkey.y > 335) {
       monkey.velocityY  =-13;
     }
   // monkey.velocityY = monkey.velocityY + 0.8
