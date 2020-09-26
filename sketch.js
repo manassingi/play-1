@@ -51,7 +51,7 @@ function draw() {
   background("white");
  
   if (gameState===PLAY){
-    
+      monkey.visible=true;
      stroke("black");
   textSize(20);
   fill("black");
@@ -64,7 +64,7 @@ function draw() {
       monkey.velocityY  =-13;
     }
   // monkey.velocityY = monkey.velocityY + 0.8
-  monkey.visible=true;
+
   //monkey.x=200;
    //monkey.y=380;
     gameover.visible=false;
@@ -75,14 +75,14 @@ function draw() {
   }
   else if(gameState===END){
      obstaclegroup.visible=false;
-    monkey.visible=false;
+   // monkey.visible=false;
    
     gameover.visible=true;
     banana.visible=false;
   survivalTime=0;
     jump.visible=false;
     reset.visible=true;
-    ground.visible=false;
+   // ground.visible=false;
   }
   
 drawSprites();
@@ -96,7 +96,7 @@ drawSprites();
  }
  
   if(mousePressedOver(reset)){
-     gameState=1;
+     gameState= PLAY;
      }
   monkey.collide(ground);
 }
